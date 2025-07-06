@@ -20,7 +20,7 @@ $router->add('GET', '/logout', 'AuthController@logout');
 // Executa a rota correspondente
 $router->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
-
+/*
 $db = new PDO(
     "mysql:host={$_ENV['DB_HOST']};dbname={$_ENV['DB_NAME']}",
     $_ENV['DB_USER'],
@@ -32,3 +32,5 @@ $stmt = $db->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)
 $stmt->execute(['Administrador', 'admin@roomly.com', $password]);
 
 echo "Usuário criado! Email: admin@roomly.com | Senha: admin123";
+
+*/
