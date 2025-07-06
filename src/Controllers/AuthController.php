@@ -29,12 +29,23 @@ class AuthController
     public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $email = $_POST['email'];
+
+            // Verifica se o usuário já existe
+            if ((new User())->findByEmail($email)) {
+                $error = "E-mail já cadastrado!";
+                require_once __DIR__ . '/../views/auth/register.php';
+                return;
+            }
+
+            // Cria o novo usuário
             $user = new User();
             $user->create([
                 'name' => $_POST['name'],
-                'email' => $_POST['email'],
+                'email' => $email,
                 'password' => password_hash($_POST['password'], PASSWORD_BCRYPT)
             ]);
+
             header('Location: /login');
             exit;
         }
