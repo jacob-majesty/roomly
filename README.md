@@ -78,6 +78,7 @@ http://localhost:8000
 ```
 
 ## Estrutura de Arquivos Docker
+```
 roomly/
 ├── docker/
 │   ├── nginx/
@@ -87,7 +88,9 @@ roomly/
 │   │   └── php.ini
 │   └── mysql/
 │       └── my.cnf
-├── docker-compose.yml
+├── docker-compose.yml`
+```
+
 
 ## Estrutura do Projeto
 
