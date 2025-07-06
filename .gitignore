@@ -1,0 +1,23 @@
+# Dependências do Composer
+/vendor/
+
+# Ambiente e configurações sensíveis
+.env
+docker-compose.override.yml
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Cache e configurações de IDE
+.idea/
+.vscode/
+.phpunit.result.cache
+
+# Pasta de assets compilados (se usar)
+/public/assets/build/
+
+# Arquivos do sistema
+Thumbs.db
