@@ -25,3 +25,11 @@ CREATE TABLE IF NOT EXISTS bookings (
     FOREIGN KEY (room_id) REFERENCES rooms(id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+-- Criação do usuário admin (executada apenas uma vez)
+INSERT IGNORE INTO users (name, email, password) 
+VALUES (
+    'Administrador', 
+    'admin@roomly.com', 
+    '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi' -- hash de "admin123"
+);
